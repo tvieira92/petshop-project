@@ -18,7 +18,7 @@
     <header class="logo">
       <img src="assets/logo.svg" alt="Mundo Pet" />
     </header>
-    <main>
+    <!-- <main>
       <div class="container">
         <div class="title">
           <div class="width">
@@ -32,7 +32,7 @@
             <input type="date" id="date" class="date" />
           </div>
         </div>
-        <!-- Morning Section -->
+         Morning Section
         <div class="card">
             <div class="card-content">
                 <div class="period-header">
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <!-- Afternoon Section -->
+        <!-- Afternoon Section
         <div class="card">
             <div class="card-content">
                 <div class="period-header">
@@ -110,7 +110,7 @@
             </div>
         </div>
 
-        <!-- Night Section -->
+        <!-- Night Section
         <div class="card">
             <div class="card-content">
                 <div class="period-header">
@@ -142,6 +142,33 @@
             <button class="new-appointment-btn">NOVO AGENDAMENTO</button>
         </footer>
     </main>
+-->
+
+    <div class="schedule">
+        <img src="assets/icons/exclude.svg" alt="ícone de exclusão">
+        <div class="schedule-header">
+            <h1>Agende um atendimento</h1>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+
+        <form class="modal">
+            <div class="owner-modal">
+            <label for="name">Nome do tutor</label>
+            <input type="text" id="name" class="name" />
+            </div>
+
+            <div class="owner-modal">
+                <label for="name">Nome do pet</label>
+                <input type="text" id="pet-name" class="pet-name" />
+            </div>
+
+            <div class="owner-modal">
+                <label for="phone">Telefone</label>
+                <input type="number" id="phone" class="phone" placeholder="(00) 0 0000-0000" />
+            </div>
+        </form>
+        
+    </div>
     
   </body>
 </html>

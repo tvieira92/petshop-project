@@ -1,0 +1,39 @@
+.schedule {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--background-tertiary);
+    border-radius: 0.75rem;
+    margin: auto;
+    margin-top: 1.75rem;
+    padding: 2rem 1rem;
+    
+    & img {
+        position: absolute;
+        right: 1rem;
+        top: 0.75rem;
+        
+    }
+
+    & .schedule-header{
+        & h1 {
+            font-size: 1.5rem;
+        }
+
+        & p {
+            color: var(--content-secondary);
+            font-size: 0.85rem;
+            padding-top: 0.5rem;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1110px) {
+    .schedule {
+        display: grid;
+        width: 100%;
+        max-width: 750px;
+    
+    }
+}

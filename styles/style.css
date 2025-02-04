@@ -191,6 +191,37 @@ footer {
   }
 }
 
+.modal {
+    display: grid;
+    gap: 1rem;
+}
+.owner-modal {
+    display: grid;
+
+    
+}
+
+input[type="text"] {
+    background-color: var(--background-primary);
+    color: var(--content-tertiary);
+
+    font: 500 1rem/16px var(--ff-base);
+    background: url(../assets/icons/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+    max-width: 310px;
+
+    border: 1px solid var(--border-primary);
+    border-radius: 0.75rem;
+    height: 3.5rem;
+    padding-left: 2.5rem;
+    padding-right: 0.8rem;
+
+    cursor: pointer;
+
+    margin-bottom: 2rem;
+  }
+
 .new-appointment-btn:hover {
   background-color: var(--background-highlights);
 }
