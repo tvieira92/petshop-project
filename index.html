@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Agendamento Petshop</title>
+  </head>
+  <body>
+    <header class="logo">
+      <img src="assets/logo.svg" alt="Mundo Pet" />
+    </header>
+    <main>
+      <div class="container">
+        <div class="title">
+          <div class="width">
+            <h1>Sua agenda</h1>
+            <p>
+              Aqui você pode ver todos os clientes e serviços agendados para
+              hoje.
+            </p>
+          </div>
+          <div class="calendar">
+            <input type="date" id="date" class="date" />
+          </div>
+        </div>
+        <!-- Morning Section -->
+        <div class="card">
+            <div class="card-content">
+                <div class="period-header">
+                    <div class="period-title">
+                        <img src="assets/icons/morning.svg" alt="ícone manhã">
+                        <span>Manhã</span>
+                    </div>
+                    <span class="period-time">09h-12h</span>
+                </div>
+
+                <div class="divider"></div>
+                
+                <div class="appointment">
+                    <div class="appointment-content">
+                        <div class="appointment-header">
+                            <span class="time">09:00</span>
+                            <span class="pet-name">Thor</span>
+                            <span class="owner">/ Fernanda Costa</span>
+                        </div>
+                        <div class="service">Vacinação</div>
+                    </div>
+                    <button class="remove-btn">Remover agendamento</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Afternoon Section -->
+        <div class="card">
+            <div class="card-content">
+                <div class="period-header">
+                    <div class="period-title">
+                        <img src="assets/icons/afternoon.svg" alt="ícone entardecer">
+                        <span>Tarde</span>
+                    </div>
+                    <span class="period-time">13h-18h</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="appointment">
+                    <div class="appointment-content">
+                        <div class="appointment-header">
+                            <span class="time">13:00</span>
+                            <span class="pet-name">Mel</span>
+                            <span class="owner">/ João Souza</span>
+                        </div>
+                        <div class="service">Corte de Unhas</div>
+                    </div>
+                    <button class="remove-btn">Remover agendamento</button>
+                </div>
+
+                <div class="appointment">
+                    <div class="appointment-content">
+                        <div class="appointment-header">
+                            <span class="time">14:00</span>
+                            <span class="pet-name">Bella</span>
+                            <span class="owner">/ Pedro Martins</span>
+                        </div>
+                        <div class="service">Aplicação de Anti-pulgas</div>
+                    </div>
+                    <button class="remove-btn">Remover agendamento</button>
+                </div>
+
+                <div class="appointment">
+                    <div class="appointment-content">
+                        <div class="appointment-header">
+                            <span class="time">15:00</span>
+                            <span class="pet-name">Simba</span>
+                            <span class="owner">/ Juliana Rocha</span>
+                        </div>
+                        <div class="service">Tosa Higiênica</div>
+                    </div>
+                    <button class="remove-btn">Remover agendamento</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Night Section -->
+        <div class="card">
+            <div class="card-content">
+                <div class="period-header">
+                    <div class="period-title">
+                        <img src="assets/icons/night.svg" alt="ícone de noite">
+                        <span>Noite</span>
+                    </div>
+                    <span class="period-time">19h-21h</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="appointment">
+                    <div class="appointment-content">
+                        <div class="appointment-header">
+                            <span class="time">20:00</span>
+                            <span class="pet-name">Max</span>
+                            <span class="owner">/ Camila Santos</span>
+                        </div>
+                        <div class="service">Limpeza de Dentes</div>
+                    </div>
+                    <button class="remove-btn">Remover agendamento</button>
+                </div>
+            </div>
+        </div>
+            
+        
+        <footer>
+            <button class="new-appointment-btn">NOVO AGENDAMENTO</button>
+        </footer>
+    </main>
+    
+  </body>
+</html>
