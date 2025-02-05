@@ -33,7 +33,35 @@
     .schedule {
         display: grid;
         width: 100%;
-        max-width: 750px;
+        max-width: 477px;
+
+        align-items: center;
+        justify-content: center;
     
     }
+
+    & .service-description {
+        width: 100%;
+        max-width: 397px;
+    }
+
+    .date-hour {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        
+        width: 100%;
+        max-width: 397px;
+
+        & .date {
+            max-width: 190px;
+        }
+    
+        & .hour {
+            max-width: 190px;
+        }
+    }
+
+    
+  
 }
