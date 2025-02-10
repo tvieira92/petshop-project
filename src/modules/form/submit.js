@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
 
 const form = document.querySelector("form")
-const selectedDate = document.getElementById("date")
+const selectedDate = document.getElementById("date_hour")
 const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
 
 // Data atual para o input
