@@ -4,6 +4,7 @@ const form = document.querySelector("form")
 const clientName = document.getElementById("client")
 const petName = document.getElementById("petname")
 const selectedDate = document.getElementById("date_hour")
+const selectedHours = document.getElementById("hour")
 const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
 
 // Data atual para o input
@@ -33,11 +34,12 @@ form.onsubmit = (event) => {
             return alert("Selecione o horário de agendamento.")
         }
 
-        // Recupera somente a hora.
-        const [hour] = hourSelected.innerText.split(":")
+        const [date] = selectedDate.value.split(':')
         
         // Insere a hora na data.
-        const when = dayjs(selectedDate.value).add(hour, "hour")
+        const currentDate = dayjs(date + ' ' + selectedHours.value)
+        // const when = date.add(, "hour")
+    
         
         const id = new Date().getTime()
 
@@ -45,7 +47,7 @@ form.onsubmit = (event) => {
             id,
             name,
             namePet,
-            when,
+            currentDate,
         )
     } catch (error) {
         alert("Não foi possível realizar o agendamento.")
