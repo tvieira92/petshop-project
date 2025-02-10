@@ -74,3 +74,35 @@ document.getElementById('phone').addEventListener('input', function(e) {
     }                                                  remove this tracer
     e.target.value = value;
 });*/
+
+// --------------------------------------------
+
+
+// In a real HTML file, you would have this structure:
+// <input type="time" id="timeInput">
+// <p id="selectedTime"></p>
+
+// Simulating the DOM elements
+// const timeInput = { value: '', addEventListener: (event, callback) => callback({ target: timeInput }) };
+// const selectedTimeDisplay = { textContent: '' };
+
+// // Function to handle time change
+// function handleTimeChange(event) {
+//   const selectedTime = event.target.value;
+//   console.log('Selected time:', selectedTime);
+  
+//   // In a browser, this would update the text of the <p> element
+//   selectedTimeDisplay.textContent = `Selected time: ${selectedTime}`;
+// }
+
+// // Add event listener to the time input
+// timeInput.addEventListener('change', handleTimeChange);
+
+// // Simulate user input
+// console.log("Simulating user selecting 14:30");
+// timeInput.value = '14:30';
+// handleTimeChange({ target: timeInput });
+
+// console.log("Simulating user selecting 09:45");
+// timeInput.value = '09:45';
+// handleTimeChange({ target: timeInput });

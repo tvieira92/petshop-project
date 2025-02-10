@@ -10,9 +10,9 @@ export function hoursLoad({ date }){
         // Adiciona a hora na data e verifica se está no passado.
         const isHourPast = dayjs(date).add(scheduleHour, "hour").isAfter(dayjs())
         
-        return ({
+        return {
             hour,
             available: isHourPast,
-        })
+        }
     })
 }
