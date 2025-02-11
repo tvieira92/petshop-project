@@ -1,12 +1,13 @@
 import dayjs from "dayjs"
 
 // Seleciona as sessões
-const periodMorning = document.getElementById(".appointment-morning")
-const periodAfternoon = document.getElementById(".appointment-afternoon")
-const periodNight = document.getElementById(".appointment-night")
+const periodMorning = document.getElementById("appointment-morning")
+const periodAfternoon = document.getElementById("appointment-afternoon")
+const periodNight = document.getElementById("appointment-night")
 
 export function schedulesShow({ dailySchedules }) {
     try {
+        
         // Limpa as listas
         periodMorning.innerHTML = ""
         periodAfternoon.innerHTML = ""
@@ -14,35 +15,46 @@ export function schedulesShow({ dailySchedules }) {
 
         // Renderiza os agendamentos por período.
         dailySchedules.forEach((schedule) => {
-            const item = document.createElement("div")
+            const content = document.createElement("div")
+            const contentHeader = document.createElement("div")
             const time = document.createElement("span")
-            const petname = document.createElement("span")
+            const petName = document.createElement("span")
             const name = document.createElement("span")
-            const service = document.createElement("div")
+            const service = document.createElement("span")
+            const btnRemove = document.createElement("button")
             
 
             // Adiciona o id do agendamento.
-            item.setAttribute("data-id", schedule.id)
+            content.setAttribute("data-id", schedule.id)
+            content.classList.add("appointment-content")
+            contentHeader.classList.add("appointment-header")
 
+            
+            time.classList.add("time")
+            petName.classList.add("pet-name")
+            name.classList.add("owner")
+            service.classList.add("service")
+            btnRemove.classList.add("remove-btn")
+            
             time.textContent = dayjs(schedule.when).format("HH:mm")
             name.textContent = schedule.name
-            petname.textContent = schedule.petname
-            service.textContent = schedule.service
+            petName.textContent = schedule.namePet
+            service.textContent = schedule.description
+            btnRemove.textContent = 'Remover agendamento'
+            
+            contentHeader.append(time, petName, name)
 
+            content.append(contentHeader, service, btnRemove)
             // Cria o botão de remover agendamento.
-            const btnRemove = document.createElement("button")
-            btnRemove.classList.add("remove-btn")
-
-            item.append(time, petname, name, service, btnRemove)
 
             // const hour = dayjs(schedule.currentDate).hour()
 
             if(hour <= 12){
-                periodMorning.appendChild(item)
+                periodMorning.appendChild(content)
             }else if (hour > 12 && hour <= 18) {
-                periodAfternoon.appendChild(item)
+                periodAfternoon.appendChild(content)
             }else {
-                periodNight.appendChild(item)
+                periodNight.appendChild(content)
             }
 
         })

@@ -102,30 +102,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .divider {
   height: 1px;
   width: 100%;
-  max-width: 400px;
+  max-width: 375px;
   background-color: #3c3c3c;
 }
 
-.appointment-morning,
-.appointment-afternoon,
-.appointment-night {
+.appointment {
   padding: 30px;
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 
   & .appointment-content {
-    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  & .pet-name {
+    padding-inline: 1rem;
   }
 
   & .owner {
     font-weight: 500;
     color: var(--content-tertiary);
+    padding-inline: 1rem;
+    
   }
 
   & .service {
-    padding: 0.5rem 0;
     font-weight: 500;
     color: var(--content-tertiary);
   }
@@ -135,10 +137,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: none;
     color: var(--content-tertiary);
     cursor: pointer;
-
-    position: absolute;
-    right: 1rem;
-    bottom: 1px;
   }
 }
 
@@ -340,25 +338,21 @@ input[type="time"]::-webkit-clear-button {
   .appointment {
     padding: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    & .service {
-      position: absolute;
-      left: 50%;
-      bottom: 1.35rem;
-      transform: translateX(-50%);
-    }
 
     & .appointment-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
       flex: 1;
     }
-  }
 
-  .remove-btn {
-    margin-left: 20px;
-    position: absolute;
-    top: 0.5px;
+    & .owner {
+      font-family: var(--ff-base);
+      color: var(--content-secondary);
+      
+    }
+
   }
 }
 
@@ -390,4 +384,3 @@ footer {
     padding: 0.5rem;
   }
 }
-
