@@ -106,7 +106,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: #3c3c3c;
 }
 
-.appointment {
+.appointment-morning,
+.appointment-afternoon,
+.appointment-night {
   padding: 30px;
   position: relative;
   display: flex;
@@ -243,6 +245,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background: url(../assets/icons/arrow.svg);
   cursor: pointer;
 }
+
+/* input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-clear-button {
+  display: none;
+} */
 
 .btn-schedule {
   display: flex;

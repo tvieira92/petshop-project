@@ -1,3 +1,58 @@
 {
-    "schedules": []
+  "schedules": [
+    {
+      "id": 1739282836555,
+      "name": "Tiago Vieira",
+      "currentDate": "2025-02-12T15:00:00.000Z"
+    },
+    {
+      "id": 1739283145028,
+      "name": "Tiago Vieira",
+      "namePet": "Nina",
+      "description": "Banho e tosa",
+      "currentDate": "2025-02-11T15:00:00.000Z"
+    },
+    {
+      "id": 1739284983708,
+      "name": "John Doe",
+      "namePet": "Nina",
+      "description": "Banho e tosa",
+      "currentDate": "2025-02-11T15:00:00.000Z"
+    },
+    {
+      "id": 1739289766098,
+      "name": "Tiago Vieira",
+      "namePet": "Nina",
+      "description": "Tosa e banho",
+      "currentDate": "2025-02-12T15:00:00.000Z"
+    },
+    {
+      "id": 1739289924633,
+      "name": "Ane Doe",
+      "namePet": "Nina",
+      "description": "Cortar as unhas",
+      "currentDate": "2025-02-13T17:00:00.000Z"
+    },
+    {
+      "id": 1739290153389,
+      "name": "Jane Doe",
+      "namePet": "Nina",
+      "description": "Tosa",
+      "currentDate": "2025-02-12T19:00:00.000Z"
+    },
+    {
+      "id": 1739290804649,
+      "name": "John Doe",
+      "namePet": "Nina",
+      "description": "Banho e tosa",
+      "currentDate": "2025-02-11T18:00:00.000Z"
+    },
+    {
+      "id": 1739290948287,
+      "name": "Tiago Vieira",
+      "namePet": "Nina",
+      "description": "Vacina",
+      "currentDate": "2025-02-11T19:00:00.000Z"
+    }
+  ]
 }
