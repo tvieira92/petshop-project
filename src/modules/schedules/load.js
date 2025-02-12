@@ -3,7 +3,7 @@ import { schedulesShow } from "../schedules/show.js"
 import { hoursLoad } from "../form/hours-load.js"
 
 // Seleciona o input de data
-const selectedDate = document.getElementById("date_hour")
+const selectedDate = document.getElementById("date")
 
 export async function scheduleDays() {
     // Obtém a data do input.

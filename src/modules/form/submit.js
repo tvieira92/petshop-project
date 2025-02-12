@@ -53,7 +53,7 @@ form.onsubmit = async (event) => {
         // const when = date.add(, "hour")
     
         // Gera um ID.
-        const id = new Date().getTime()
+        const id = new Date().getTime().toString()
 
         await scheduleNew({
             id,

@@ -1,4 +1,7 @@
-import { apiConfig } from "./api-config.js";
+import { apiConfig } from "./api-config.js"
+import { scheduleDays } from "../modules/schedules/load.js"
+
+const modal = document.querySelector("dialog")
 
 export async function scheduleNew({ id, name, namePet, description, currentDate }) {
   try {
@@ -14,6 +17,8 @@ export async function scheduleNew({ id, name, namePet, description, currentDate 
 
     // Exibe mensagem de agendamento realizado.
     alert("Agendamento realizado com sucesso!")
+    modal.close()
+    scheduleDays()
   } catch (error) {
     console.log(error);
     alert("Não foi possível agendar. Tente novamente mais tarde.");
