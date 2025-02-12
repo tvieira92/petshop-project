@@ -5,6 +5,7 @@ const periodMorning = document.getElementById("appointment-morning")
 const periodAfternoon = document.getElementById("appointment-afternoon")
 const periodNight = document.getElementById("appointment-night")
 
+
 export function schedulesShow({ dailySchedules }) {
     try {
         
@@ -12,6 +13,7 @@ export function schedulesShow({ dailySchedules }) {
         periodMorning.innerHTML = ""
         periodAfternoon.innerHTML = ""
         periodNight.innerHTML = ""
+        
 
         // Renderiza os agendamentos por período.
         dailySchedules.forEach((schedule) => {
@@ -36,7 +38,7 @@ export function schedulesShow({ dailySchedules }) {
             service.classList.add("service")
             btnRemove.classList.add("remove-btn")
             
-            time.textContent = dayjs(schedule.when).format("HH:mm")
+            time.textContent = dayjs(schedule.currentDate).format("HH:mm")
             name.textContent = schedule.name
             petName.textContent = schedule.namePet
             service.textContent = schedule.description
@@ -47,7 +49,7 @@ export function schedulesShow({ dailySchedules }) {
             content.append(contentHeader, service, btnRemove)
             // Cria o botão de remover agendamento.
 
-            // const hour = dayjs(schedule.currentDate).hour()
+            const hour = dayjs(schedule.currentDate).hour()
 
             if(hour <= 12){
                 periodMorning.appendChild(content)
@@ -56,10 +58,10 @@ export function schedulesShow({ dailySchedules }) {
             }else {
                 periodNight.appendChild(content)
             }
-
+            
         })
 
-        console.log(dailySchedules)
+        
         
     } catch (error) {
         alert("Não foi possível exibir os agendamentos.")

@@ -109,11 +109,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .appointment {
   padding: 30px;
   display: flex;
+  flex-wrap: wrap;
 
   & .appointment-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    padding: 0.7rem 0;
   }
 
   & .pet-name {
@@ -124,7 +125,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 500;
     color: var(--content-tertiary);
     padding-inline: 1rem;
-    
   }
 
   & .service {
@@ -137,6 +137,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: none;
     color: var(--content-tertiary);
     cursor: pointer;
+    padding-left: 2rem;
   }
 }
 
@@ -186,7 +187,7 @@ footer {
 .owner-modal {
   display: grid;
 
-  label {
+  & label {
     padding-bottom: 0.65rem;
     color: var(--content-primary);
   }
@@ -338,21 +339,23 @@ input[type="time"]::-webkit-clear-button {
   .appointment {
     padding: 30px;
     display: flex;
+    flex-wrap: wrap;
+    
 
     & .appointment-content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-
-      flex: 1;
+      
     }
 
     & .owner {
       font-family: var(--ff-base);
       color: var(--content-secondary);
-      
     }
 
+    & .remove-btn {
+      
+    }
   }
 }
 

@@ -61,7 +61,6 @@ h1 {
 body {
     background-color: var(--background-primary);
     height: 100vh;
-    overflow: hidden;
 }
 
 .desktop-only {
@@ -95,5 +94,10 @@ input {
         max-width: 397px;
         
         
+    }
+
+    body {
+        overflow-y: hidden;
+        height: 100vh;
     }
 }
